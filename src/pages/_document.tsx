@@ -23,6 +23,7 @@ class MyDocument extends Document {
             type='font/woff2'
             crossOrigin='anonymous'
           />
+          <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Nunito:wght@200&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />

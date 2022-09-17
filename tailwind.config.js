@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const  defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        "Cormorant":["Cormorant Garamond",...defaultTheme.fontFamily.sans]
       },
       colors: {
         primary: {
@@ -25,6 +27,7 @@ module.exports = {
         },
         dark: '#222222',
       },
+
       keyframes: {
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {

@@ -4,6 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const CarouselHero = () => {
 
     useEffect(() => {
@@ -22,15 +24,82 @@ const CarouselHero = () => {
         className="pb-5 -mt-[120px] -z-50"
         >
                     {/* First slide */}
-                    <div    className="h-[600px] w-[100%] relative pb-5">
+                    {/* <div    className="h-[600px] w-[100%] relative pb-5">
                         <Image  className="-z-10" src="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg" layout="fill" objectFit="cover"/>
 
-                        <div   className="absolute top-52 right-52">
-                            <h1  data-aos-delay={1000} data-aos="fade-left" data-aos-duration={5000} >That's wassup</h1>
-                            <h1 data-aos="fade-in" data-aos-delay={2000} data-aos-duration={5000}>That's wassup</h1>
-                          
-                        </div>
+                        <motion.div  
+                        initial={{
+                            scale:0.3,
+                            opacity:0,
+                            z:0
+                    
+                        }}
+
+                        animate={{
+                            scale:[0.2,0.4,0.6,0.8,1],
+                            opacity:1,
+                            z:0.3
+                        }}
+                        className="absolute top-52 right-40 bg-black/50 p-5 ">
+                            
+                        </motion.div>
                        
+                    </div> */}
+
+                    <div className="flex-col justify-between">
+                        {/* Left side */}
+                        <div className="flex h-screen w-[100%] justify-between ">
+                            <div className="w-[50%] flex-col space-y-10 items-center bg-green-100">
+                                <p className="font-Cormorant lg:mt-[40%] text-[60px]">
+                                    Juice and smoothie bar
+                                </p>
+
+                                <p className="font-Cormorant text-gray-800  text-[30px] leading-8 mx-[8%]">Come on down and try out our freshly squezzed perfections!</p>
+
+                                <div className="flex space-x-8 w-full">
+                                    <div className="mx-auto">
+                                        <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-red-300 mr-8 hover:border-none transition-all duration-500 ease-out">Explore</button>
+                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 hover:border-none transition-all duration-500 ease-out ">Products</button>
+
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            {/* Right side */}
+
+                            <div className="w-[50%] bg-red-400 relative">
+                                
+                            </div>
+
+                            <motion.div
+                            initial={{
+                                scale:0.5,
+                                opacity:0,
+                                x:500
+                            }}
+
+                            animate={{
+                                scale:1,
+                                opacity:1,
+                                x:0
+                            }}
+                            transition={{
+                                duration:2
+                            }}
+                            className="absolute top-52  right-[10vw] h-[380px] w-[610px]">
+                                <Image src="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg" layout="fill" objectFit="cover"/>
+                            </motion.div>
+                        </div>
+
+                        <div className="absolute -bottom-5 right-[45%] animate-pulse cursor-pointer">
+                            <ArrowDropDownIcon className="text-black h-32 w-32"/>
+                        </div>
+
+                        <div className="p-5">
+                                icons
+                        </div>
+                     
                     </div>
 
                 
