@@ -49,7 +49,7 @@ const CarouselHero = () => {
                     <div className="flex-col justify-between">
                         {/* Left side */}
                         <div className="flex h-screen w-[100%] justify-between ">
-                            <div className="w-[50%] flex-col space-y-10 items-center bg-green-100">
+                            <div className="w-[50%] flex-col space-y-10 items-center bg-lightYellow">
                                 <p className="font-Cormorant lg:mt-[40%] text-[60px]">
                                     Juice and smoothie bar
                                 </p>
@@ -58,8 +58,8 @@ const CarouselHero = () => {
 
                                 <div className="flex space-x-8 w-full">
                                     <div className="mx-auto">
-                                        <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-red-300 mr-8 hover:border-none transition-all duration-500 ease-out">Explore</button>
-                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 hover:border-none transition-all duration-500 ease-out ">Products</button>
+                                        <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-blue-300 active:scale-90 mr-8 hover:border-none transition-all duration-500 ease-in-out">Explore</button>
+                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 active:scale-90 hover:border-none transition-all duration-500 ease-in-out ">Products</button>
 
                                     </div>
                                    
@@ -68,7 +68,7 @@ const CarouselHero = () => {
 
                             {/* Right side */}
 
-                            <div className="w-[50%] bg-red-400 relative">
+                            <div className="w-[50%] bg-black relative">
                                 
                             </div>
 
@@ -87,8 +87,8 @@ const CarouselHero = () => {
                             transition={{
                                 duration:2
                             }}
-                            className="absolute top-52  right-[10vw] h-[380px] w-[610px]">
-                                <Image src="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg" layout="fill" objectFit="cover"/>
+                            className="absolute top-52  right-[10vw] h-[380px] w-[610px] shadow-lg">
+                                <Image src="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg" layout="fill" objectFit="cover"/>
                             </motion.div>
                         </div>
 

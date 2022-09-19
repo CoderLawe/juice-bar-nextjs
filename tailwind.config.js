@@ -26,6 +26,10 @@ module.exports = {
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
         dark: '#222222',
+        darkBrown:"#523521",
+        lightBrown:'#DBA97C',
+        lightYellow:'#F7DD64',
+        lighterYellow:'#D3AD21'
       },
 
       keyframes: {

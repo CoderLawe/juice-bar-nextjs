@@ -40,13 +40,13 @@ const Nav = () => {
         }}
 
        
-        className="flex space-x-12   animate-shimmer z-50 items-center">
-        <BlenderIcon className="h-20 w-20 text-green-800"/>
+        className="flex space-x-12    animate-shimmer z-50 items-center">
+        <BlenderIcon className="h-20 w-20 text-green-800 cursor-pointer"/>
 
-            <p className="font-serif text-sm text-gray-700">HOME</p>
-            <p className="font-serif text-sm text-gray-700">ABOUT</p>
-            <p className="font-serif text-sm text-gray-700">MENU</p>
-            <p className="font-serif text-sm text-gray-700">CONTACT US</p>
+            <p className="font-serif text-sm text-gray-900  cursor-pointer ">HOME</p>
+            <p className="font-serif text-sm text-gray-900 cursor-pointer ">ABOUT</p>
+            <p className="font-serif text-sm text-gray-900  cursor-pointer">MENU</p>
+            <p className="font-serif text-sm text-gray-900  cursor-pointer">CONTACT US</p>
 
         </motion.div>
         {/* Right side */}
@@ -67,9 +67,9 @@ const Nav = () => {
         }}
         className='flex space-x-8 items-center'>
             {/* <BlenderIcon className="h-32 w-32 text-green-800"/> */}
-            <InstagramIcon className="h-8 w-8 text-yellow-600"/>
-            <FacebookIcon className="h-8 w-8 text-yellow-600"/>
-            <PinterestIcon className="h-8 w-8 text-yellow-600"/>
+            <InstagramIcon className="h-7 w-7 text-yellow-400"/>
+            <FacebookIcon className="h-7 w-7 text-yellow-400"/>
+            <PinterestIcon className="h-7 w-7 text-yellow-400"/>
             <button className="bg-green-800 p-5 text-gray-300 cursor-pointer hover:bg-yellow-600 transition-all duration-500 ease-in-out hover:italic">+123 45 67 89</button>
         </motion.div>
 

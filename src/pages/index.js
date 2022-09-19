@@ -17,6 +17,8 @@ import CarouselHero from "../components/CarouselHero";
  */
 import Vercel from '~/svg/Vercel.svg';
 import { Carousel } from 'react-responsive-carousel';
+import About from '../components/About';
+import Menu from '../components/Menu';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -28,13 +30,17 @@ export default function HomePage() {
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
-      <main className="bg-black">
+      <main className="bg-black ">
         <div className='sticky top-0 z-50'>
         <Nav />
 
         </div>
 
       <CarouselHero className="-z-10"/>
+
+      <About />
+
+      <Menu />
 
 
       </main>
