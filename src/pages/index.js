@@ -19,6 +19,8 @@ import Vercel from '~/svg/Vercel.svg';
 import { Carousel } from 'react-responsive-carousel';
 import About from '../components/About';
 import Menu from '../components/Menu';
+import Gallery from '../components/Gallery';
+import Contact from '../components/Contact';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -41,6 +43,10 @@ export default function HomePage() {
       <About />
 
       <Menu />
+
+      <Gallery />
+
+      <Contact />
 
 
       </main>

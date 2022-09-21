@@ -3,7 +3,31 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import { motion } from "framer-motion"
+import { useEffect, useState } from 'react';
 const Nav = () => {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    const showStar = () =>{
+        if(window.scrollY>60){
+            setScrolled(true)
+        }
+        else{
+            setScrolled(false)   
+        }
+    }
+
+    useEffect(function mount() {
+        function onScroll() {
+          console.log("scroll!");
+        }
+    
+        window.addEventListener('scroll', showStar);
+    
+        return function unMount() {
+          window.removeEventListener("scroll", showStar);
+        };
+      });
     return(
     <motion.div 
         initial={{
@@ -19,7 +43,7 @@ const Nav = () => {
         transition = {{
             duration:2
         }}
-    className="flex justify-between bg-black/20 px-10 py-2 z-50">
+    className={scrolled ? "hidden lg:flex justify-between bg-darkerHeaderBrown/80 text-gray-300 transfrom transition-all duration-500 ease-in-out px-10 py-2 z-50":"lg:flex hidden justify-between bg-black/20 px-10 py-2 z-50"}>
         {/* Left side */}
 
         <motion.div 
@@ -41,12 +65,16 @@ const Nav = () => {
 
        
         className="flex space-x-12    animate-shimmer z-50 items-center">
-        <BlenderIcon className="h-20 w-20 text-green-800 cursor-pointer"/>
+            
+                    <BlenderIcon className={!scrolled ? "hidden":"h-20 w-20 text-green-800 cursor-pointer transfrom transition-all duration-500 ease-in-out -ml-2"}/>
 
-            <p className="font-serif text-sm text-gray-900  cursor-pointer ">HOME</p>
-            <p className="font-serif text-sm text-gray-900 cursor-pointer ">ABOUT</p>
-            <p className="font-serif text-sm text-gray-900  cursor-pointer">MENU</p>
-            <p className="font-serif text-sm text-gray-900  cursor-pointer">CONTACT US</p>
+                    <span className={!scrolled ? "transform transition-all ease-in-out duration-1000 -ml-2 text-[40px] text-green-800 cursor-pointer font-Cormorant italic underline-":"hidden"}>Juiced</span>
+
+                  
+            <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>HOME</p>
+            <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>ABOUT</p>
+            <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>MENU</p>
+            <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>CONTACT US</p>
 
         </motion.div>
         {/* Right side */}

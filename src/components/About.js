@@ -3,13 +3,19 @@ import Image from "next/image";
 const About = () => {
 
     return(
-        <div className="lg:flex justify-between">
+        <div className="lg:flex block justify-between">
             {/* Left side */}
 
-            <div className="w-[50%] flex-col space-y-8  border-r-2">
+            <div className="lg:w-[50%] flex-col space-y-8  lg:border-r-2">
                 <div>
-                  <h2 className="font-Cormorant text-lightYellow text-[50px] text-center">Enjoy our stunning ambiance</h2>
-                    <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                  <h2 className="font-Cormorant text-lightYellow text-[50px] leading-[50px] text-center">Enjoy our stunning ambiance</h2>
+                    <div className="px-5">
+                        <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                        <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                        <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+
+                    </div>
+                  
                 </div>
 
                 <div className="flex justify-center space-x-8">

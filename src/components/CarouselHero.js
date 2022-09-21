@@ -49,8 +49,8 @@ const CarouselHero = () => {
                     <div className="flex-col justify-between">
                         {/* Left side */}
                         <div className="flex h-screen w-[100%] justify-between ">
-                            <div className="w-[50%] flex-col space-y-10 items-center bg-lightYellow">
-                                <p className="font-Cormorant lg:mt-[40%] text-[60px]">
+                            <div className="lg:w-[50%] w-screen flex-col space-y-10 items-center bg-lightYellow relative">
+                                <p className="font-Cormorant mt-[40%] lg:mt-[40%] text-[60px] leading-[50px] mr-10">
                                     Juice and smoothie bar
                                 </p>
 
@@ -68,7 +68,7 @@ const CarouselHero = () => {
 
                             {/* Right side */}
 
-                            <div className="w-[50%] bg-black relative">
+                            <div className="lg:w-[50%] bg-black ">
                                 
                             </div>
 
@@ -87,7 +87,7 @@ const CarouselHero = () => {
                             transition={{
                                 duration:2
                             }}
-                            className="absolute top-52  right-[10vw] h-[380px] w-[610px] shadow-lg">
+                            className="absolute top-52  md:right-[10%] lg:h-[380px] lg:w-[610px] shadow-lg">
                                 <Image src="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg" layout="fill" objectFit="cover"/>
                             </motion.div>
                         </div>
