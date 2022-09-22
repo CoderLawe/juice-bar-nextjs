@@ -2,6 +2,7 @@ import React from 'react'
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CallIcon from "@mui/icons-material/Call";
+import MailIcon from "@mui/icons-material/Mail";
 import Map from './Map';
 function Contact() {
   return (
@@ -38,19 +39,24 @@ function Contact() {
             <div className="flex-col space-y-5 items-center">
                 <div className="flex-col space-y-2">
                     <p className="text-lightYellow flex justify-center">Name</p>
-                    <input className="shadow-lg mx-auto flex justify-center bg-transparent md:px-10 text-gray-200 rounded-lg p-2 focus:scale-105 focus:outline-none  hover:border-lighterYellow focus:border-lightYellow transform transition duration-300 ease-out" type="text" placeholder="Enter your name here"/>
+                    <input className="shadow-lg mx-auto flex justify-center bg-transparent md:px-10 text-gray-200 rounded-lg p-2 focus:scale-105 focus:outline-none  border-transparent hover:border-lighterYellow focus:border-lightYellow transform transition duration-300 ease-out" type="text" placeholder="Enter your name here"/>
                 </div>
 
 
                 <div className="flex-col space-y-2">
                     <p className="text-lightYellow flex justify-center">Email</p>
-                    <input className="shadow-lg mx-auto flex justify-center  bg-transparent md:px-10 text-gray-200 rounded-lg p-2 focus:scale-105 focus:outline-none  hover:border-lighterYellow focus:border-lightYellow transform transition duration-300 ease-out" type="email" placeholder="Enter your email here"/>
+                    <input className="shadow-lg mx-auto flex justify-center   bg-transparent md:px-10 text-gray-200 rounded-lg p-2 focus:scale-105 focus:outline-none  border-transparent hover:border-lighterYellow focus:border-lightYellow transform transition duration-300 ease-out" type="email" placeholder="Enter your email here"/>
                 </div>
 
 
                 <div className="flex-col space-y-2">
                     <p className="text-lightYellow flex justify-center">Message</p>
-                    <textarea  className="shadow-lg mx-auto flex justify-center   bg-transparent md:px-10 text-gray-200 rounded-lg p-2 focus:scale-105 focus:outline-none  hover:border-lighterYellow focus:border-lightYellow transform transition duration-300 ease-out" type="text" placeholder="Enter your message here"/>
+                    <textarea  className="shadow-lg mx-auto flex justify-center   bg-transparent md:px-10 text-gray-200 rounded-lg p-2 focus:scale-105 focus:outline-none border-transparent hover:border-lighterYellow focus:border-lightYellow transform transition duration-300 ease-out" type="text" placeholder="Enter your message here"/>
+                </div>
+
+                <div className="flex justify-center">
+                    <MailIcon className="h-12 w-12 text-coolYellowFocus cursor-pointer hover:text-coolYellow transition-all duration-500 ease-in-out" />
+
                 </div>
 
             </div>
@@ -58,7 +64,7 @@ function Contact() {
 
         {/* Right side */}
 
-        <div className='w-[300px] h-[200px]lg:w-[500px] lg:h-[400px] bg-gray-200 flex mx-auto'>
+        <div className='w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] bg-gray-200 flex mx-auto'>
             <Map className="lg:w-[500px] w-[90vw] ml-3 h-[400px]" />
         </div>
     </div>

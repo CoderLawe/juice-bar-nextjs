@@ -1,5 +1,5 @@
 
-const MenuItem = () => {
+const MenuItem = ({ title, extras, price, image}) => {
     return(
         <div className="flex-col ">
             {/* Menu Item */}

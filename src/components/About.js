@@ -6,7 +6,11 @@ const About = () => {
 
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 50,
+        })
       }, []);
 
 
@@ -19,7 +23,7 @@ const About = () => {
                 <div>
                   <h2 className="font-Cormorant text-lightYellow text-[38px]  lg:text-[50px] leading-[50px] text-center">Enjoy our stunning ambiance</h2>
                     <div className="px-5">
-                        <p data-aos="fade-in" data-aos-duration={3000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                        <p data-aos="fade-in" data-aos-duration={4000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
                         <p data-aos="fade-in" data-aos-duration={4000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
                         <p data-aos="fade-in" data-aos-duration={5000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
 
