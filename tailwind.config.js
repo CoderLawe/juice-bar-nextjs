@@ -31,7 +31,9 @@ module.exports = {
         lightYellow:'#F7DD64',
         lighterYellow:'#D3AD21',
         headerBrown:'#6F4120',
-        darkerHeaderBrown:'#130B06'
+        darkerHeaderBrown:'#130B06',
+        coolYellow:'#ac9a76',
+        coolYellowFocus:'#846b3c'
       },
 
       keyframes: {

@@ -2,12 +2,15 @@ import BlenderIcon from '@mui/icons-material/Blender';
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close"
 import { motion } from "framer-motion"
 import { useEffect, useState } from 'react';
+
 const Nav = () => {
 
     const [scrolled, setScrolled] = useState(false);
-
+    const [clicked, setClicked] = useState(false);
     const showStar = () =>{
         if(window.scrollY>60){
             setScrolled(true)
@@ -107,7 +110,26 @@ const Nav = () => {
 
             {/* Small screen navbar */}
 
-            <motion.div className="p-6 bg-black text-white lg:hidden flex justify-between ">
+            <motion.div className={clicked ? "p-6 bg-black h-screen text-white lg:hidden block justify-between ":"p-6 bg-darkerHeaderBrown/80 text-white lg:hidden block justify-between"}>
+                <div className="flex justify-between items-center">
+                <p className="font-Cormorant italic text-coolYellow text-[40px]">J</p>
+                <MenuIcon onClick={() => setClicked(true)}className={clicked ? "hidden":"h-12 w-12 flex justify-end"}/>
+                <CloseIcon onClick={() => setClicked(false)}className={clicked ? "h-12 w-12 flex justify-end":"hidden"}/>
+
+                
+                </div>
+                
+                <div className={clicked ? "flex justify-center  items-center":"hidden"}>
+                    <div className="flex-col space-y-16 mt-12">
+
+                        <p className="text-coolYellow text-[42px] font-Cormorant">HOME</p>
+                        <p className="text-coolYellow text-[42px] font-Cormorant">ABOUT</p>
+                        <p className="text-coolYellow text-[42px] font-Cormorant">GALLERY</p>
+                        <p className="text-coolYellow text-[42px] font-Cormorant">CONTACT US</p>
+                        {/* <p className="text-coolYellow text-[50px] font-Cormorant">HOME</p> */}
+
+                    </div>  
+                </div>
                 
             </motion.div>
         </div>

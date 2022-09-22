@@ -12,7 +12,7 @@ const GalleryImage = ({ img }) => {
             scale:1,
             z:[0,0.1,2]
         }}
-        className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] relative">
+        className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[200px] lg:h-[200px] relative">
             <Image src={img} layout="fill" objectFit="cover"/>
         </motion.div>
     )

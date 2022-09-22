@@ -21,7 +21,7 @@ const CarouselHero = () => {
         showThumbs={false}
         // interval={3000}
         id="carousel" 
-        className="pb-5 -mt-[120px] -z-50"
+        className="pb-5 -mt-[200px] lg:-mt-[120px] -z-50"
         >
                     {/* First slide */}
                     {/* <div    className="h-[600px] w-[100%] relative pb-5">
@@ -46,7 +46,7 @@ const CarouselHero = () => {
                        
                     </div> */}
 
-                    <div className="flex-col justify-between">
+                    <div className=" hidden lg:block justify-between">
                         {/* Left side */}
                         <div className="flex h-screen w-[100%] justify-between ">
                             <div className="lg:w-[50%] w-screen flex-col space-y-10 items-center bg-lightYellow relative">
@@ -87,9 +87,11 @@ const CarouselHero = () => {
                             transition={{
                                 duration:2
                             }}
-                            className="absolute top-52  md:right-[10%] lg:h-[380px] lg:w-[610px] shadow-lg">
+                            className="absolute top-52 md:hidden lg:flex lg:right-[5%] xl:w[14%] lg:h-[350px] lg:w-[580px] xl:h-[360px] xl:w-[610px] shadow-lg">
                                 <Image src="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg" layout="fill" objectFit="cover"/>
                             </motion.div>
+
+                           
                         </div>
 
                         <div className="absolute -bottom-5 right-[45%] animate-pulse cursor-pointer">
@@ -101,6 +103,8 @@ const CarouselHero = () => {
                         </div>
                      
                     </div>
+
+       
 
                 
 
