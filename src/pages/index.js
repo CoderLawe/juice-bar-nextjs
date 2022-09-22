@@ -21,7 +21,6 @@ import About from '../components/About';
 import Menu from '../components/Menu';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
-import Masonry from "../components/Masonry";
 import SmallCarouselHero from '../components/SmallCarouselHero';
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
