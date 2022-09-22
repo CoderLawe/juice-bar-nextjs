@@ -1,6 +1,15 @@
 import Image from "next/image";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useEffect } from "react";
 const About = () => {
+
+
+    useEffect(() => {
+        AOS.init();
+      }, []);
+
+
 
     return(
         <div className="lg:flex block justify-between">
@@ -10,9 +19,9 @@ const About = () => {
                 <div>
                   <h2 className="font-Cormorant text-lightYellow text-[38px]  lg:text-[50px] leading-[50px] text-center">Enjoy our stunning ambiance</h2>
                     <div className="px-5">
-                        <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
-                        <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
-                        <p className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                        <p data-aos="fade-in" data-aos-duration={3000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                        <p data-aos="fade-in" data-aos-duration={4000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
+                        <p data-aos="fade-in" data-aos-duration={5000} className="text-gray-400 text-sm lg:mx-[10%] mt-8 leading-8">Come an enjoy an evening at our pristine location, and get away from the hustle and bustle of city life. Grab yourself a glass of the finest iced coffee in Bujumbura and relax...or something</p>
 
                     </div>
                   

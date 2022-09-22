@@ -7,9 +7,9 @@ function Contact() {
   return (
     <div className="lg:flex block justify-between">
         {/* Left side */}
-        <div className="ml-10 flex-col space-y-8 bg-darkerHeaderBrown px-12 py-16 lg:ml-20 md:w-[500px]">
+        <div className=" flex-col space-y-8 bg-darkerHeaderBrown px-12 py-16 mx-auto lg:ml-20 md:w-[500px]">
             <div className="">
-                <h5 className="text-lighterYellow font-Cormorant text-[50px] leading-10">CONTACT US</h5>
+                <h5 className="text-lighterYellow font-Cormorant text-[30px] lg:text-[50px] leading-10">CONTACT US</h5>
             </div>
 
             <div className="flex space-x-4 items-center">

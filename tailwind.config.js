@@ -61,6 +61,11 @@ module.exports = {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
       },
+
+      backgroundImage: theme =>({
+       "menu-background":"url('https://cdn.discordapp.com/attachments/817048198022430761/1021350098501898310/pexels-abhishek-hajare-5511227.jpg')",
+       "smallMenuBackground":"url('https://cdn.discordapp.com/attachments/817048198022430761/1022481055686611055/Screen_Shot_2022-09-22_at_2.12.59_PM.png')"
+      }),
     },
   },
   plugins: [require('@tailwindcss/forms')],

@@ -110,7 +110,23 @@ const Nav = () => {
 
             {/* Small screen navbar */}
 
-            <motion.div className={clicked ? "p-6 bg-black h-screen text-white lg:hidden block justify-between ":"p-6 bg-darkerHeaderBrown/80 text-white lg:hidden block justify-between"}>
+            <motion.div 
+            initial={{
+                opacity:0,
+                scale:0,
+                x:-500,
+            }}
+
+            animate={{
+                opacity:1,
+                scale:1,
+                x:0,
+            }}
+
+            transition={{
+                duration:5
+            }}
+            className={clicked ? "transition-all duration-500 ease-in-out p-6 bg-black h-screen text-white lg:hidden block justify-between ":"transition-all duration-500 ease-in-out p-6 bg-darkerHeaderBrown/80 text-white lg:hidden block justify-between"}>
                 <div className="flex justify-between items-center">
                 <p className="font-Cormorant italic text-coolYellow text-[40px]">J</p>
                 <MenuIcon onClick={() => setClicked(true)}className={clicked ? "hidden":"h-12 w-12 flex justify-end"}/>
