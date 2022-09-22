@@ -70,7 +70,7 @@ function SmallCarouselHero() {
                         duration:4
                     }}
     
-                    className="font-serif font-light leading-10 text-gray-500 text-[20px] mt-5">Redefining the meaning of "from branch to glass!"</motion.p>
+                    className="font-serif font-light leading-10 text-gray-500 text-[20px] mt-5">Redefining the meaning of from branch to glass!</motion.p>
                 </div>
             </div>
         </motion.div>
