@@ -9,7 +9,7 @@ function Contact() {
         {/* Left side */}
         <div className="ml-10 flex-col space-y-8 bg-darkerHeaderBrown px-12 py-16 lg:ml-20 md:w-[500px]">
             <div className="">
-                <h5 className="text-lighterYellow font-Cormorant text-[50px]">CONTACT US</h5>
+                <h5 className="text-lighterYellow font-Cormorant text-[50px] leading-10">CONTACT US</h5>
             </div>
 
             <div className="flex space-x-4 items-center">
@@ -58,7 +58,7 @@ function Contact() {
 
         {/* Right side */}
 
-        <div className='w-[500px] h-[400px] bg-gray-200 flex mx-auto'>
+        <div className='w-[300px] h-[200px]lg:w-[500px] lg:h-[400px] bg-gray-200 flex mx-auto'>
             <Map className="lg:w-[500px] w-[90vw] ml-3 h-[400px]" />
         </div>
     </div>
