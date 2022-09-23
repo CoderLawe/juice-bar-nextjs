@@ -36,7 +36,7 @@ function Preloader() {
                 transition={{
                     duration:2
                 }}
-                className='font-serif text-[40px] text-coolYellow'>FLATFENDER SMOOTHIE BAR</motion.h1>
+                className='font-serif text-[12px] lg:text-[28px] text-coolYellow'>FLATFENDER SMOOTHIE BAR</motion.h1>
                 <div className="flex  justify-center space-x-4 items-center">
 
                     <h1 className="text-coolYellowFocus font-Cormorant text-[30px]">We are</h1>

@@ -64,8 +64,8 @@ function Contact() {
 
         {/* Right side */}
 
-        <div className='w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] bg-gray-200 flex mx-auto'>
-            <Map className="lg:w-[500px] w-[90vw] ml-3 h-[400px]" />
+        <div className='w-[70vw] h-[200px] lg:w-[600px] lg:h-[400px]  flex mx-auto'>
+            <Map className="lg:w-full w-[90vw] ml-3 h-[400px]" />
         </div>
     </div>
   )

@@ -58,21 +58,24 @@ const CarouselHero = () => {
 
                                 <p className="font-Cormorant text-gray-500  text-[30px] leading-8 mx-[8%]">Come down and try out our freshly squezzed perfections!</p>
 
-                                <div className="flex space-x-8 w-full">
-                                    <div className="mx-auto">
+                                <div className="flex justify-center space-x-5">
 
-                                        <div className="flex space-x-4 items-center mt-20">
+                                        {/* <div className="flex space-x-4 items-center mt-10">
                                             <ClockIcon className="text-coolYellowFocus h-8 w-8"/>
                                             <p className="text-gray-900 font-serif text-lg">Mon - Friday 8AM - 10PM</p>
 
-                                            <PinIcon className="text-coolYellowFocus h-8 w-8"/>
-                                            <p className="text-gray-900 font-serif text-lg">Fordline Shore</p>
+                                            
                                         </div>
 
-                                        {/* <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-blue-300 active:scale-90 mr-8 hover:border-none transition-all duration-500 ease-in-out">Explore</button>
-                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 active:scale-90 hover:border-none transition-all duration-500 ease-in-out ">Products</button> */}
+                                        <div className="flex space-x-4 items-center mt-20">
+                                            <PinIcon className="text-coolYellowFocus h-8 w-8"/>
+                                            <p className="text-gray-900 font-serif text-lg">Fordline Shore</p>
 
-                                    </div>
+                                        </div> */}
+                                          
+                                        <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-blue-300 active:scale-90 mr-8 hover:border-none transition-all duration-500 ease-in-out">Explore</button>
+                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 active:scale-90 hover:border-none transition-all duration-500 ease-in-out ">Products</button>
+
                                    
                                 </div>
                             </div>

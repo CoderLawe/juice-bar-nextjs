@@ -146,6 +146,15 @@ const Nav = () => {
                         <p className="text-coolYellow text-[42px] font-Cormorant">CONTACT US</p>
                         {/* <p className="text-coolYellow text-[50px] font-Cormorant">HOME</p> */}
 
+
+                        <div className="flex justify-center space-x-10 mx-auto mt-8 ">
+                            <InstagramIcon className="h-7 w-7 text-yellow-400"/>
+                            <FacebookIcon className="h-7 w-7 text-yellow-400"/>
+                            <PinterestIcon className="h-7 w-7 text-yellow-400"/>
+                        </div>
+                       
+                        
+
                     </div>  
                 </div>
                 

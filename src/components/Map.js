@@ -1,35 +1,43 @@
 import React, { useState } from 'react'
 import  ReactMapGl, { Marker, Popup } from "react-map-gl";
 import 'mapbox-gl/dist/mapbox-gl.css';
+import Image from "next/image";
 function Map() {
   const [viewPort, setViewPort] = useState({
    
     latitude:-3.386485,
     longitude:29.383222,
-    zoom:14
+    zoom:15
 })
   return (
     <ReactMapGl
         width="100%"
         height="100%"
         mapStyle="mapbox://styles/coderlawe/cl89fdedr007y14plxcvq7osx"
-        mapboxApiAccessToken="pk.eyJ1IjoiY29kZXJsYXdlIiwiYSI6ImNrcGZvbGE1ajBkd2QydnFvY2tndGs2cjYifQ.hx9O2OuDutDwo1AbZUREqg"
-        
-        onViewportChange={(viewPort) => setViewPort(viewPort)}
-        {...viewPort}
+        mapboxAccessToken="pk.eyJ1IjoiY29kZXJsYXdlIiwiYSI6ImNrcGZvbGE1ajBkd2QydnFvY2tndGs2cjYifQ.hx9O2OuDutDwo1AbZUREqg"
+        initialViewState ={{
+            longitude: 29.383222,
+            latitude: -3.386485,
+            zoom: 14,
+          }}
+        // onViewportChange ={(viewPort) => setViewPort(viewPort)}
+        // {...viewPort}
 
         >
             
 
-            {/* <Popup
+            <Popup
             closeOnClick={true}
             latitude={-3.386485}
             longitude={29.383222}
-            className="rounded-2xl z-50"
+            className="rounded-2xl z-50 "
             >
-                <div className="flex-col">
-                    <div className="flex justify-center px-3">
-                        <h5 className="font-bold">Bites on the double location</h5>
+                <div className="flex-col ">
+                    <div className="flex justify-center ">
+                        <div className="relative h-[50px] lg:h-[120px] w-[100%]">
+                            <Image layout="fill" objectFit="cover" src="https://cdn.discordapp.com/attachments/817048198022430761/1021347820357296128/pexels-eiliv-aceron-6895958.jpg"/>
+
+                        </div>
                     </div>
 
                     <div className="flex justify-center">
@@ -45,7 +53,7 @@ function Map() {
                     </div>
                 </div>
                
-            </Popup> */}
+            </Popup>
 
         </ReactMapGl>
   )

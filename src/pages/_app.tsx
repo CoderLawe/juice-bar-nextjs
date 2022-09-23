@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
+import { PageProvider } from "../components/context/PageContext"
 
 /**
  * !STARTERCONF info
@@ -10,7 +11,13 @@ import '@/styles/colors.css';
  */
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <PageProvider>
+
+      <Component {...pageProps} />
+    </PageProvider>
+
+  )
 }
 
 export default MyApp;
