@@ -6,6 +6,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ClockIcon from "@mui/icons-material/Watch";
+import PinIcon from "@mui/icons-material/PinDrop"
 const CarouselHero = () => {
 
     useEffect(() => {
@@ -21,7 +23,7 @@ const CarouselHero = () => {
         showThumbs={false}
         // interval={3000}
         id="carousel" 
-        className="pb-5 -mt-[200px] lg:-mt-[120px] -z-50"
+        className=" -mt-[200px] lg:-mt-[120px] -z-50"
         >
                     {/* First slide */}
                     {/* <div    className="h-[600px] w-[100%] relative pb-5">
@@ -54,12 +56,21 @@ const CarouselHero = () => {
                                     Juice and smoothie bar
                                 </p>
 
-                                <p className="font-Cormorant text-gray-800  text-[30px] leading-8 mx-[8%]">Come on down and try out our freshly squezzed perfections!</p>
+                                <p className="font-Cormorant text-gray-500  text-[30px] leading-8 mx-[8%]">Come down and try out our freshly squezzed perfections!</p>
 
                                 <div className="flex space-x-8 w-full">
                                     <div className="mx-auto">
-                                        <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-blue-300 active:scale-90 mr-8 hover:border-none transition-all duration-500 ease-in-out">Explore</button>
-                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 active:scale-90 hover:border-none transition-all duration-500 ease-in-out ">Products</button>
+
+                                        <div className="flex space-x-4 items-center mt-20">
+                                            <ClockIcon className="text-coolYellowFocus h-8 w-8"/>
+                                            <p className="text-gray-900 font-serif text-lg">Mon - Friday 8AM - 10PM</p>
+
+                                            <PinIcon className="text-coolYellowFocus h-8 w-8"/>
+                                            <p className="text-gray-900 font-serif text-lg">Fordline Shore</p>
+                                        </div>
+
+                                        {/* <button className="border-2 px-5 py-3 border-red-400 bg-transparent hover:bg-blue-300 active:scale-90 mr-8 hover:border-none transition-all duration-500 ease-in-out">Explore</button>
+                                        <button className="border-2 px-5 py-3 border-blue-300 bg-transparent hover:bg-red-400 active:scale-90 hover:border-none transition-all duration-500 ease-in-out ">Products</button> */}
 
                                     </div>
                                    
@@ -85,6 +96,7 @@ const CarouselHero = () => {
                                 x:0
                             }}
                             transition={{
+                                delay:8,
                                 duration:2
                             }}
                             className="absolute top-52 md:hidden lg:flex lg:right-[5%] xl:w[14%] lg:h-[350px] lg:w-[580px] xl:h-[360px] xl:w-[610px] shadow-lg">

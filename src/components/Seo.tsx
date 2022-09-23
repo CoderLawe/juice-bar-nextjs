@@ -6,7 +6,7 @@ const defaultMeta = {
   title: 'Smoothie bar',
   siteName: 'Smoothie bar',
   description:
-  'An interactive site for a mock smoothie bar built by Lawe Sosah',
+  'A responsive smoothie bar site  built by Lawe Sosah',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://lawe-portfolio.vercel.app',
   type: 'website',

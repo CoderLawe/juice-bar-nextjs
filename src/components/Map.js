@@ -19,16 +19,9 @@ function Map() {
         {...viewPort}
 
         >
-            <Marker
-             longitude={29.383222}
-             latitude={3.386485}
+            
 
-            >
-               {/* <Image src="/images/coffee-logo.png" height={200} width={200} objectFit="cover"/> */}
-               <h1>Marker</h1>
-            </Marker>
-
-            <Popup
+            {/* <Popup
             closeOnClick={true}
             latitude={-3.386485}
             longitude={29.383222}
@@ -52,7 +45,7 @@ function Map() {
                     </div>
                 </div>
                
-            </Popup>
+            </Popup> */}
 
         </ReactMapGl>
   )

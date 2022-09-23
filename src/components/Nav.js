@@ -46,9 +46,10 @@ const Nav = () => {
                     scale:1
                 }}
                 transition = {{
+                    delay:8,
                     duration:2
                 }}
-            className={scrolled ? "hidden lg:flex justify-between bg-darkerHeaderBrown/80 text-gray-300 transfrom transition-all duration-500 ease-in-out px-10 py-2 z-50":"lg:flex hidden justify-between bg-black/20 px-10 py-2 z-50"}>
+            className={scrolled ? "hidden lg:flex justify-between bg-darkerHeaderBrown/80 text-gray-300 transfrom transition-all duration-500 ease-in-out px-5 py-2 z-50":"lg:flex hidden justify-between bg-black/20 px-5 py-2 z-50"}>
                 {/* Left side */}
 
                 <motion.div 
@@ -65,6 +66,7 @@ const Nav = () => {
                 }}
 
                 transition = {{
+                    delay:8,
                     duration:3
                 }}
 
@@ -73,7 +75,7 @@ const Nav = () => {
                     
                             <BlenderIcon className={!scrolled ? "hidden":"h-20 w-20 text-green-800 cursor-pointer transfrom transition-all duration-500 ease-in-out -ml-2"}/>
 
-                            <span className={!scrolled ? "transform transition-all ease-in-out duration-1000 -ml-2 text-[40px] text-green-800 cursor-pointer font-Cormorant italic underline-":"hidden"}>Juiced</span>
+                            <span className={!scrolled ? "transform transition-all ease-in-out duration-1000 -ml-2 text-[40px] text-green-800 cursor-pointer font-Cormorant italic underline-":"hidden"}>Flatfender</span>
 
                         
                     <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>HOME</p>

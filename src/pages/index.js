@@ -22,6 +22,7 @@ import Menu from '../components/Menu';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import SmallCarouselHero from '../components/SmallCarouselHero';
+import Preloader from '../components/Preloader';
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
@@ -32,6 +33,7 @@ export default function HomePage() {
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
+      <Preloader />
       <main className="bg-black ">
         <div className='sticky top-0 z-50'>
         <Nav />
