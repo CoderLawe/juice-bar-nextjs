@@ -13,7 +13,6 @@ import { PageProvider } from "../components/context/PageContext"
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <PageProvider>
-
       <Component {...pageProps} />
     </PageProvider>
 
