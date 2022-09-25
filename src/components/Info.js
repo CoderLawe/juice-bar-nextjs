@@ -23,10 +23,11 @@ function Info() {
          </div> */}
           <div data-aos="fade-in" className="lg:w-1/2 md:ml-16  ">
               {/* Left */}
-           <Image className="imageHover lg:ml-12" src="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg"  height={600} width={500} objectFit="cover"/> 
+                <Image className="imageHover lg:ml-12" src="https://cdn.discordapp.com/attachments/817048198022430761/1023671180869238894/pexels-mix-and-match-studio-4227017.jpg"  height={600} width={500} objectFit="cover"/> 
+
 
               <div data-aos="zoom-in"className="-mt-48 ml-40">
-                  <Image className="hover:scale-105 hover:bg-pacity-75 transform transition duration-300 ease-out "src="https://cdn.discordapp.com/attachments/817048198022430761/1021330259020349500/pexels-jess-bailey-designs-1058434.jpg" height={300} width={300} objectFit="cover"/>
+                  <Image className="hover:scale-105 hover:bg-pacity-75 transform transition duration-300 ease-out "src="https://cdn.discordapp.com/attachments/817048198022430761/1023671197466112131/pexels-valeria-boltneva-1516422.jpg" height={300} width={300} objectFit="cover"/>
 
               </div>
 

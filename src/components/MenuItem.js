@@ -77,7 +77,7 @@ const MenuItem = ({ image }) => {
             {/* Modal */}
 
 
-            
+{/*             
             <Modal 
        open={open}
        onClose={handleClose}
@@ -94,7 +94,7 @@ const MenuItem = ({ image }) => {
             </div>
          </Box>
 
-       </Modal>
+       </Modal> */}
         </div>
     )
 }
