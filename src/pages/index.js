@@ -8,6 +8,7 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Nav from "../components/Nav";
 import CarouselHero from "../components/CarouselHero";
+// import MasonryGallery from "../components/MasonryGallery";
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -23,13 +24,16 @@ import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import SmallCarouselHero from '../components/SmallCarouselHero';
 import Preloader from '../components/Preloader';
+import CascadingCards from '../components/CascadingCards';
+import CascadingGallery from '../components/CascadingGallery';
+import Footer from '../components/Footer';
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
 export default function HomePage() {
   return (
-    <Layout>
+    <Layout className="">
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
@@ -48,12 +52,26 @@ export default function HomePage() {
       <Menu />
 
     {/* <Masonry /> */}
+    <div className='mx-5 lg:mx-20'>
       <Gallery />
 
-      <Contact />
+    </div>
+      {/* <CascadingGallery /> */}
+      
+      {/* <MasonryGallery /> */}
+      <div className="">
+        <Contact />
+
+      </div>
+
 
 
       </main>
+
+      <div className="bg-black pt-20">
+        <Footer />
+
+      </div>
     </Layout>
   );
 }

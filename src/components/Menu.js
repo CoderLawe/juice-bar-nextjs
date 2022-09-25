@@ -2,11 +2,26 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import MenuItem from "./MenuItem";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ImageContext, OpenContext } from "./context/PageContext";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+
 const Menu = () => {
     const [path, setPath] = useContext(ImageContext)
     const [open, setOpen] = useContext(OpenContext);
+
+
+
+    useEffect(() => {
+        AOS.init({
+            once: false,
+            duration:2000
+        })
+      }, []);
+
+
     return(
         <Carousel
         autoplay={true}
@@ -21,7 +36,7 @@ const Menu = () => {
         <section className="bg-smallMenuBackground lg:bg-none  bg-cover bg-fixed lg:flex block mx-auto justify-between lg:mx-12 lg:pb-32 mt-16">
                 {/* Left side */}
                     <div className="bg-black/90 flex-col space-y-10 z-20 px-2 lg:mx-0">
-                        <p className="text-gray-300 text-[60px] font-Cormorant">Fresh Juices</p>
+                        <p data-aos="fade-in" data-aos-duration="3000" className="text-gray-300 text-[50px] lg:text-[60px] font-Cormorant">Fresh Juices</p>
 
                        
                         
@@ -56,7 +71,7 @@ const Menu = () => {
                 {/* Right side */}
 
                 <div className="flex-col bg-black/90 space-y-10 z-20  pt-6 px-2 lg:mx-0">
-                    <p className="text-gray-300 text-[60px] font-Cormorant">Cocktails</p>
+                    <p data-aos="fade-in" data-aos-duration="3000" className="text-gray-300 text-[60px] font-Cormorant">Cocktails</p>
 
                     <div className="flex-col space-y-12 mt-10">
                         {/* Menu items */}

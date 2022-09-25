@@ -4,6 +4,10 @@ import Box from '@mui/material/Box';
 import { useContext, useEffect, useState } from 'react';
 import Image from "next/image";
 import { ImageContext, OpenContext } from "./context/PageContext";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+
 const MenuItem = ({ image }) => {
 
     const [open, setOpen] = useContext(OpenContext)
@@ -37,16 +41,26 @@ const MenuItem = ({ image }) => {
       },[])
 
 
+
+    useEffect(() => {
+      AOS.init({
+          once: false,
+          duration:2000
+      })
+    }, []);
+
+
+
       
     return(
         <div  onMouseEnter={handleOpen} onMouseLeave={() => setOpen(false)}  className="flex-col cursor-pointer">
             {/* Menu Item */}
             <div  className="flex space-x-8 justify-between items-center lg:max-w-[550px]">
-                <p className="text-lightYellow font-Cormorant text-[18px] lg:text-[25px]">Mango Smoothie on Ice</p>
+                <p data-aos="fade-in" data-aos-duration="3000" className="text-coolYellow font-light font-Cormorant text-[20px] lg:text-[25px]">Mango Smoothie on Ice</p>
 
                 <div className="w-[140px] h-[0.02em] bg-lightYellow"/>
 
-                <p  className="text-gray-300 font-Cormorant text-[25px]">$32</p>
+                <p  data-aos="fade-in" data-aos-duration="4000" className="text-gray-300 font-Cormorant text-[25px]">$32</p>
 
                 {/* <div className={open ? "flex h-[250px] w-[250px] relative ":"hidden"}>
                     <Image src={image} layout="fill" objectFit="cover"/>
@@ -54,7 +68,10 @@ const MenuItem = ({ image }) => {
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 text-[18px] text-sm font-serif mt-6  leading-6 font-light">Mango smoothie with a touch of whipped cream</p>
+            <div className="flex justify-start">
+              <p className="text-gray-400 text-[15px] text-sm  mt-4 ml-3 lg:ml-0  leading-6 font-light">Whipped cream | Ice</p>
+
+            </div>
 
 
             {/* Modal */}

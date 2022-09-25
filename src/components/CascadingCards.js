@@ -57,7 +57,7 @@ function Deck() {
 
 export default function CascadingCards() {
   return (
-    <div className={`flex fill center ${styles.cards__container}`}>
+    <div className={`h-[600px] w-[800px]${styles.cards__container}`}>
       <Deck />
     </div>
   )
