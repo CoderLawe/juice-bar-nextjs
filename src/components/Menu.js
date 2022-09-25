@@ -33,7 +33,7 @@ const Menu = () => {
         id="carousel" 
         >
             {/* First slide */}
-        <section className="bg-smallMenuBackground lg:bg-none  bg-cover bg-fixed lg:flex block mx-auto justify-between lg:mx-12 lg:pb-32 mt-16">
+        <section id="menu" className="bg-smallMenuBackground lg:bg-none  bg-cover bg-fixed lg:flex block mx-auto justify-between lg:mx-12 lg:pb-32 mt-16">
                 {/* Left side */}
                     <div className="bg-black/90 flex-col space-y-10 z-20 px-2 lg:mx-0">
                         <p data-aos="fade-in" data-aos-duration="3000" className="text-gray-300 text-[50px] lg:text-[60px] font-Cormorant">Fresh Juices</p>

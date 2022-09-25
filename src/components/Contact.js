@@ -6,7 +6,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import Map from './Map';
 function Contact() {
   return (
-    <div className="lg:flex block justify-between">
+    <div id="contactUs" className="lg:flex block justify-between">
         {/* Left side */}
         <div className=" flex-col space-y-8 bg-darkerHeaderBrown px-12 py-16 mx-auto lg:ml-20 md:w-[500px]">
             <div className="">
@@ -63,10 +63,10 @@ function Contact() {
         </div>
 
         {/* Right side */}
-{/* 
+
         <div className='w-[70vw] h-[200px] lg:w-[600px] lg:h-[400px]  flex mx-auto'>
             <Map className="lg:w-full w-[90vw] ml-3 h-[400px]" />
-        </div> */}
+        </div> 
     </div>
   )
 }

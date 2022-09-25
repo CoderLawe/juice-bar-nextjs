@@ -7,11 +7,15 @@ import CloseIcon from "@mui/icons-material/Close"
 import { motion } from "framer-motion"
 import { useEffect, useState } from 'react';
 import JeepGrille from './JeepGrille';
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const Nav = () => {
 
     const [scrolled, setScrolled] = useState(false);
     const [clicked, setClicked] = useState(false);
+
+
     const showStar = () =>{
         if(window.scrollY>60){
             setScrolled(true)
@@ -20,6 +24,7 @@ const Nav = () => {
             setScrolled(false)   
         }
     }
+
 
     useEffect(function mount() {
         function onScroll() {
@@ -78,12 +83,65 @@ const Nav = () => {
 
                             {/* <span className={!scrolled ? "transform transition-all ease-in-out duration-1000 -ml-2 text-[40px] text-green-800 cursor-pointer font-Cormorant italic underline-":"hidden"}>Flatfender</span> */}
 
-                        
+                    <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
                     <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>HOME</p>
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>ABOUT</p>
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>MENU</p>
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>CONTACT US</p>
 
+                    </Link>
+
+                    <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>ABOUT</p>
+
+                    </Link>
+                    <Link
+                    activeClass="active"
+                    to="menu"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>MENU</p>
+
+                    </Link>   
+
+                    <Link
+                    activeClass="active"
+                    to="gallery"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>GALLERY</p>
+
+                    </Link> 
+
+
+                    <Link
+                    activeClass="active"
+                    to="contactUs"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>CONTACT</p>
+
+                    </Link> 
                 </motion.div>
                 {/* Right side */}
 
@@ -106,7 +164,7 @@ const Nav = () => {
                     <InstagramIcon className="h-7 w-7 text-yellow-400"/>
                     <FacebookIcon className="h-7 w-7 text-yellow-400"/>
                     <PinterestIcon className="h-7 w-7 text-yellow-400"/>
-                    <button className="bg-green-800 p-5 text-gray-300 cursor-pointer hover:bg-yellow-600 transition-all duration-500 ease-in-out hover:italic">+123 45 67 89</button>
+                    <button className="bg-green-800 p-5 text-gray-300 cursor-pointer hover:bg-coolYellow hover:text-gray-700 transition-all duration-500 ease-in-out hover:italic">+123 45 67 89</button>
                 </motion.div>
 
             </motion.div>
@@ -141,11 +199,54 @@ const Nav = () => {
                 <div className={clicked ? "flex justify-center  items-center":"hidden"}>
                     <div className="flex-col space-y-16 mt-12">
 
-                        <p className="text-coolYellow text-[42px] font-Cormorant">HOME</p>
-                        <p className="text-coolYellow text-[42px] font-Cormorant">ABOUT</p>
-                        <p className="text-coolYellow text-[42px] font-Cormorant">GALLERY</p>
-                        <p className="text-coolYellow text-[42px] font-Cormorant">CONTACT US</p>
-                        {/* <p className="text-coolYellow text-[50px] font-Cormorant">HOME</p> */}
+                    <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant ">HOME</p>
+
+                    </Link>   
+
+                    <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant mt-12">ABOUT</p>
+
+                    </Link> 
+
+                    <Link
+                    activeClass="active"
+                    to="gallery"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant mt-12">GALLERY</p>
+
+                    </Link> 
+
+                    <Link
+                    activeClass="active"
+                    to="contactUs"
+                    spy={true}
+                    smooth={true}
+                    duration={2000}
+                    
+                    >
+                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant mt-12">CONTACT US</p>
+
+                    </Link> 
+                    
 
 
                         <div className="flex justify-center space-x-10 mx-auto mt-8 ">

@@ -48,7 +48,7 @@ const CarouselHero = () => {
                        
                     </div> */}
 
-                    <div className=" hidden lg:block justify-between">
+                    <div id="home" className=" hidden lg:block justify-between">
                         {/* Left side */}
                         <div className="flex h-screen w-[100%] justify-between ">
                             <div className="lg:w-[50%] w-screen flex-col space-y-10 items-center bg-lightYellow relative">

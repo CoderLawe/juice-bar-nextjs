@@ -58,7 +58,7 @@ const MenuItem = ({ image }) => {
             <div  className="flex space-x-8 justify-between items-center lg:max-w-[550px]">
                 <p data-aos="fade-in" data-aos-duration="3000" className="text-coolYellow font-light font-Cormorant text-[20px] lg:text-[25px]">Mango Smoothie on Ice</p>
 
-                <div className="w-[140px] h-[0.02em] bg-lightYellow"/>
+                <div data-aos="fade-in" data-aos-duration="2000" className="w-[140px] h-[0.02em] bg-lightYellow"/>
 
                 <p  data-aos="fade-in" data-aos-duration="4000" className="text-gray-300 font-Cormorant text-[25px]">$32</p>
 
@@ -69,7 +69,7 @@ const MenuItem = ({ image }) => {
 
             {/* Description */}
             <div className="flex justify-start">
-              <p className="text-gray-400 text-[15px] text-sm  mt-4 ml-3 lg:ml-0  leading-6 font-light">Whipped cream | Ice</p>
+              <p data-aos="fade-in" data-aos-duration="4000" className="text-gray-400 text-[15px] text-sm  mt-4 ml-3 lg:ml-0  leading-6 font-light">Whipped cream | Ice</p>
 
             </div>
 
