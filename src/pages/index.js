@@ -27,6 +27,7 @@ import Preloader from '../components/Preloader';
 import CascadingCards from '../components/CascadingCards';
 import CascadingGallery from '../components/CascadingGallery';
 import Footer from '../components/Footer';
+import Info from '../components/Info';
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
@@ -52,6 +53,7 @@ export default function HomePage() {
       <Menu />
 
     {/* <Masonry /> */}
+    <Info />
     <div className='mx-5 lg:mx-20'>
       <Gallery />
 

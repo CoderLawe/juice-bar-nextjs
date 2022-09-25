@@ -56,7 +56,7 @@ const CarouselHero = () => {
                                     Juice and smoothie bar
                                 </p>
 
-                                <p className="font-Cormorant text-gray-500  text-[30px] leading-8 mx-[8%]">Come down and try out our freshly squezzed perfections!</p>
+                                <p className="font-serif text-gray-800  text-[30px] leading-8 mx-[8%]">Hand picked | Freshly squezzed!</p>
 
                                 <div className="flex justify-center space-x-5">
 

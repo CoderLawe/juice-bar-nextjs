@@ -23,7 +23,7 @@ function Footer() {
           </div>
       </div>
 
-      <p className="text-gray-200 text-xs font-serif flex justify-center">FLATFENDER BAR</p>
+      <p className="text-gray-200 text-xs font-serif flex justify-center">FLATFENDER SMOOTHIR BAR </p>
          
     </div>
   )
