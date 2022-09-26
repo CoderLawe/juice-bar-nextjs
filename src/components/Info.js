@@ -44,7 +44,7 @@ function Info() {
         
 
               <div className="flex-col lg:-mt-10 mt-5 md:-mt-0 mx-4">
-                  <h1 data-aos="fade-in" className="text-coolYellowFocus font-extrabold text-xl font-serif mt-10">WHO WE ARE</h1>
+                  <h1 data-aos="fade-in" className="text-coolYellowFocus font-extrabold text-xl font-serif mt-12">WHO WE ARE</h1>
 
                   <div className="md:mr-44 ">
                       <div className="">
@@ -68,7 +68,7 @@ function Info() {
                     
                   </div>
 
-                  <p data-aos="fade-in" className="text-gray-400 font-serif text-sm md:mr-44 mt-10 lg:mt-16">
+                  <p data-aos="fade-in" className="text-gray-400 font-serif text-sm md:mr-44 mt-6 lg:mt-16">
                       <span data-aos="zoom-in"className="text-coolYellowFocus">Flatfender </span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
                           laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
