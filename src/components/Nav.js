@@ -1,21 +1,37 @@
-import BlenderIcon from '@mui/icons-material/Blender';
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close"
-import { motion } from "framer-motion"
-import { useEffect, useState } from 'react';
-import JeepGrille from './JeepGrille';
+import Image from 'next/image';
+
+import { useEffect, useRef, useState } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FaceBookIcon from '@mui/icons-material/Facebook';
+// import PinterestIcon from '@mui/icons-material/Pinterest';
+import MenuIcon from "@mui/icons-material/Menu";
+import BlenderIcon from "@mui/icons-material/Blender";
+import CloseIcon from "@mui/icons-material/Close";
+import { useSpring, useTransition, animated, to } from '@react-spring/web'
 
 
 const Nav = () => {
 
+   
     const [scrolled, setScrolled] = useState(false);
-    const [clicked, setClicked] = useState(false);
+    const [opened, setOpened] = useState(false);
 
 
+
+    console.log('opened',opened)
+
+    const n = useRef(0);
+
+        const styles = useSpring({
+            loop: () => 5 > n.current++,
+            from :{rotateZ : 0},
+            to :{rotateZ : 360},
+
+        })
+
+        
+ 
     const showStar = () =>{
         if(window.scrollY>60){
             setScrolled(true)
@@ -37,232 +53,222 @@ const Nav = () => {
           window.removeEventListener("scroll", showStar);
         };
       });
-    return(
+        return (
+            // Large Nav start
         <div>
-            {/* Large screen navbar */}
-        <motion.div 
-                initial={{
-                    y: - 500,
-                    opacity:0,
-                    scale:0.5
-                }}
-                animate = {{
-                    y:0,
-                    opacity:1,
-                    scale:1
-                }}
-                transition = {{
-                    delay:8,
-                    duration:2
-                }}
-            className={scrolled ? "hidden lg:flex justify-between bg-darkerHeaderBrown/80 text-gray-300 transfrom transition-all duration-500 ease-in-out pl-2 pr-5 py-2 z-50":"lg:flex hidden justify-between bg-black/20 px-5 py-2 z-50"}>
-                {/* Left side */}
-
-                <motion.div 
-                initial={{
-                    x: -300,
-                    opacity:0,
-                    scale:0.5
-                }}
-
-                animate={{
-                    x:0,
-                    opacity:1,
-                    scale:1
-                }}
-
-                transition = {{
-                    delay:8,
-                    duration:3
-                }}
-
-            
-                className="flex space-x-12    animate-shimmer z-50 items-center">
+             <nav className={scrolled? "navbar  hidden md:flex justify-between  z-50 bg-black/70 py-3 pr-3 ":"hidden md:flex justify-between mx-10 z-50 navbar"}>
+                <div className="flex space-x-8 items-center text-gray-100 text-[12px] pt-2 font-extrabold">
+                    {/* Left */}
+                    <div className={ scrolled ? "hidden ":"text-coolYellow scale-125 bg-rounded-lg flex ml-5 h-20 w-20 p-5"} 
+    >
+                        <span className="font-Cormotant text-[50px] italic">J</span>
+                    </div>
+                    <Link 
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={10000}
+                >
                     
-                            <BlenderIcon className={scrolled ? "flex h-20 w-20 text-green-800 cursor-pointer transfrom transition-all duration-500 ease-in-out pl-3":"hidden"}/>
-
-                            {/* <span className={!scrolled ? "transform transition-all ease-in-out duration-1000 -ml-2 text-[40px] text-green-800 cursor-pointer font-Cormorant italic underline-":"hidden"}>Flatfender</span> */}
-
-                    <Link
-                    activeClass="active"
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    duration={2000}
+                    <animated.div 
+                        style={{
+                        
+                            ...styles,
+                        }
+                        }
                     
-                    >
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>HOME</p>
+                        > <BlenderIcon className={scrolled ? "h-16 w-16 text-coolYellow transform transition ease-in-out duration-1000 cursor-pointer" :"transform transition ease-in-out duration-500 hidden "}/>
+                    </animated.div>
+                
+                </Link>
+                <Link
+                className="navbar"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                >
+                <p className="activate hover:hover-link active:text-coolYellow active:border-b active:border-coolYellow">HOME</p>
 
-                    </Link>
-
-                    <Link
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    duration={2000}
-                    
-                    >
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>ABOUT</p>
-
-                    </Link>
-                    <Link
+                </Link>
+                <Link
                     activeClass="active"
                     to="menu"
                     spy={true}
                     smooth={true}
                     duration={2000}
-                    
-                    >
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>MENU</p>
-
-                    </Link>   
-
-                    <Link
+                >
+                    <p className="hover:hover-link">ABOUT</p>
+                </Link>
+                <Link
                     activeClass="active"
-                    to="gallery"
+                    to="contact-us"
                     spy={true}
                     smooth={true}
                     duration={2000}
-                    
-                    >
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>GALLERY</p>
-
-                    </Link> 
-
-
-                    <Link
-                    activeClass="active"
-                    to="contactUs"
-                    spy={true}
-                    smooth={true}
-                    duration={2000}
-                    
-                    >
-                    <p className={scrolled ? "font-serif text-sm text-gray-300  cursor-pointer ":"font-serif text-sm text-gray-900  cursor-pointer "}>CONTACT</p>
-
-                    </Link> 
-                </motion.div>
-                {/* Right side */}
-
-                <motion.div 
-                initial={{
-                    opacity:0,
-                    scale:0
-                }}
-
-                animate={{
-                    opacity:1,
-                    scale:1
-                }}
-
-                transition={{
-                    duration:3
-                }}
-                className='flex space-x-8 items-center'>
-                    {/* <BlenderIcon className="h-32 w-32 text-green-800"/> */}
-                    <InstagramIcon className="h-7 w-7 text-yellow-400"/>
-                    <FacebookIcon className="h-7 w-7 text-yellow-400"/>
-                    <PinterestIcon className="h-7 w-7 text-yellow-400"/>
-                    <button className="bg-green-800 p-5 text-gray-300 cursor-pointer hover:bg-coolYellow hover:text-gray-700 transition-all duration-500 ease-in-out hover:italic">+123 45 67 89</button>
-                </motion.div>
-
-            </motion.div>
-
-            {/* Small screen navbar */}
-
-            <motion.div 
-            initial={{
-                opacity:0,
-                scale:0,
-                x:-500,
-            }}
-
-            animate={{
-                opacity:1,
-                scale:1,
-                x:0,
-            }}
-
-            transition={{
-                duration:5
-            }}
-            className={clicked ? "transition-all duration-500 ease-in-out p-6 bg-black h-screen text-white lg:hidden block justify-between ":"transition-all duration-500 ease-in-out p-6 bg-darkerHeaderBrown/80 text-white lg:hidden block justify-between"}>
-                <div className="flex justify-between items-center">
-                <p className="font-Cormorant italic text-coolYellow text-[40px]">J</p>
-                <MenuIcon onClick={() => setClicked(true)}className={clicked ? "hidden":"h-12 w-12 flex justify-end"}/>
-                <CloseIcon onClick={() => setClicked(false)}className={clicked ? "h-12 w-12 flex justify-end":"hidden"}/>
-
-                
-                </div>
-                
-                <div className={clicked ? "flex justify-center  items-center":"hidden"}>
-                    <div className="flex-col space-y-16 mt-12">
-
-                    <Link
-                    activeClass="active"
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    duration={2000}
-                    
-                    >
-                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant ">HOME</p>
-
-                    </Link>   
-
-                    <Link
+                >
+                    <p className="hover:hover-link highlighted">MENU</p>
+                </Link>
+                <Link
                     activeClass="active"
                     to="about"
                     spy={true}
                     smooth={true}
-                    duration={2000}
-                    
-                    >
-                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant mt-12">ABOUT</p>
+                    duration={1000}
+                >
+                    <p className="hover:hover-link">GALLERY</p>
+                </Link>
+                <Link
+                    activeClass="active"
+                    to="contactUs"
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                >
+                    <p className="hover:hover-link active:text-white">CONTACT</p>
+                </Link>
 
-                    </Link> 
 
-                    <Link
+                {/* <Link
                     activeClass="active"
                     to="gallery"
                     spy={true}
                     smooth={true}
                     duration={2000}
-                    
-                    >
-                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant mt-12">GALLERY</p>
+                >
+                    <p className="hover:hover-link active:text-white">GALLERY</p>
+                </Link> */}
 
-                    </Link> 
-
-                    <Link
-                    activeClass="active"
-                    to="contactUs"
-                    spy={true}
-                    smooth={true}
-                    duration={2000}
-                    
-                    >
-                    <p onClick={() => setClicked(false)} className="text-coolYellow text-[42px] font-Cormorant mt-12">CONTACT US</p>
-
-                    </Link> 
-                    
+                </div>
 
 
-                        <div className="flex justify-center space-x-10 mx-auto mt-8 ">
-                            <InstagramIcon className="h-7 w-7 text-yellow-400"/>
-                            <FacebookIcon className="h-7 w-7 text-yellow-400"/>
-                            <PinterestIcon className="h-7 w-7 text-yellow-400"/>
+                <div className="flex space-x-4 items-center">
+                    {/* Right */}
+                    <InstagramIcon className="h-8 w-8 text-coolYellow"/>
+                    <FaceBookIcon className="h-8 w-8 text-coolYellow"/>
+                    <InstagramIcon className="h-8 w-8 text-coolYellow"/>
+
+                    {/* <PinterestIcon className="h-6 text-coolYellow"/> */}
+                    {/* <div  onClick={!session ? signIn :signOut} className="text-coolYellow">
+                        <p>
+                            {session ? `Hello, ${session.user.name}`:'Sign In'}
+                        </p>
+                        <p  className="font-extrabold md:text-sm">Account & Lists</p>
+                    </div> */}
+                <button className="p-3 bg-black border border-coolYellowFocus text-coolYellow hover:bg-coolYellowFocus hover:text-black transform transition duration-500 ease-out mr-10">+123.45.67.89.10</button>
+
+                </div>
+        </nav>
+
+            {/* Small nav start */}
+
+            <nav className={scrolled  ?" md:hidden bg-black/70 p-5 " :"  md:hidden bg-transparent p-5 "}>
+                <div className={opened ? "md:hidden flex justify-between items-center bg-coolYellowFocus":"flex justify-between  bg-coolBrown ml-10 md:hidden items-center"}>
+                    <span className="text-[40px] font-Cormorant italic text-coolYellowFocus">F</span>
+                    <button className={opened?"hidden":"px-2 py-5 bg-transparent border border-coolYellowFocus text-coolYellow hover:bg-coolYellowFocus hover:text-black transform transition duration-500 ease-out "}>+123.45.67.8.9</button>
+                    <MenuIcon onClick={() => setOpened(true)}className={opened ? "hidden transform transition duration-300 ease-out":"h-14 w-14 text-coolYellowFocus cursor-pointer"}/>
+                    <div className="flex justify-end">
+                        <CloseIcon onClick={() => setOpened(false)}className={opened ? " h-14 w-14 text-gray-700 cursor-pointer" :"hidden"}/>
+
+                    </div>
+                </div>
+
+                <div className={opened ? " flex justify-center bg-coolYellowFocus  h-screen":"hidden"}>
+                        <div className="flex-col space-y-10 mt-10">
+                            <Link 
+                            activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            duration={10000}
+                            >
+{/*                                 
+                                <animated.div 
+                                    style={{
+                                    
+                                        ...styles,
+                                    }
+                                    }
+                                
+                                    > <StarIcon className={scrolled ? "h-16 text-coolYellow transform transition ease-in-out duration-1000 cursor-pointer" :"transform transition ease-in-out duration-500 hidden "}/>
+                                </animated.div> */}
+                            
+                            </Link>
+                            <Link
+                            className="navbar"
+                            activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                            >
+                            <p onClick={() => setOpened(false)} className="text-gray-900 text-[40px] font-Cormorant ">HOME</p>
+
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="menu"
+                                spy={true}
+                                smooth={true}
+                                duration={2000}
+                            >
+                                <p  onClick={() => setOpened(false)} className="text-gray-900 text-[40px] font-Cormorant mt-12">MENU</p>
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="contactUs"
+                                spy={true}
+                                smooth={true}
+                                duration={2000}
+                            >
+                                <p onClick={() => setOpened(false)} className="text-gray-900 text-[40px] font-Cormorant mt-12">CONTACT</p>
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                            >
+                                <p onClick={() => setOpened(false)} className="text-gray-900 text-[40px] font-Cormorant mt-12">ABOUT</p>
+                            </Link>
+                            {/* <Link
+                                activeClass="active"
+                                to="newsletter"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                            >
+                                <p onClick={() => setOpened(false)} className="text-gray-900 text-[40px] font-Cormorant">SUBSCRIBE</p>
+                            </Link> */}
+{/* 
+                            <Link
+                                activeClass="active"
+                                to="blogsection"
+                                spy={true}
+                                smooth={true}
+                                duration={2000}
+                            >
+                                <p onClick={() => setOpened(false)} className="small-navIcons mb-5">BLOG</p>
+                            </Link> */}
+
+                            
+                                <div className="flex space-x-8 items-center  pb-32 pt-52">
+                                    <InstagramIcon className="h-10 w-10 text-gray-900"/>
+                                    <FaceBookIcon className="h-10 w-10 text-gray-900"/>
+                                    {/* <PinterestIcon className="h-6 text-gray-900"/> */}
+                                    <InstagramIcon className="h-10 w-10 text-gray-900"/>
+                                </div>
                         </div>
-                       
-                        
 
-                    </div>  
+                     
                 </div>
                 
-            </motion.div>
+            </nav>
         </div>
-    
+       
     )
 }
 
