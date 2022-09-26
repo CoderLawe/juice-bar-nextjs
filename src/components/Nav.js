@@ -79,7 +79,7 @@ const Nav = () => {
             
                 className="flex space-x-12    animate-shimmer z-50 items-center">
                     
-                            <BlenderIcon className={scrolled ? "flex h-20 w-20 text-green-800 cursor-pointer transfrom transition-all duration-500 ease-in-out pl-3":"hidden"}/>
+                            {/* <BlenderIcon className={scrolled ? "flex h-20 w-20 text-green-800 cursor-pointer transfrom transition-all duration-500 ease-in-out pl-3":"hidden"}/> */}
 
                             {/* <span className={!scrolled ? "transform transition-all ease-in-out duration-1000 -ml-2 text-[40px] text-green-800 cursor-pointer font-Cormorant italic underline-":"hidden"}>Flatfender</span> */}
 
