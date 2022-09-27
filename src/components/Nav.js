@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import BlenderIcon from "@mui/icons-material/Blender";
 import CloseIcon from "@mui/icons-material/Close";
 import { useSpring, useTransition, animated, to } from '@react-spring/web'
-
+import { motion } from "framer-motion"
 
 const Nav = () => {
 
@@ -56,7 +56,23 @@ const Nav = () => {
         return (
             // Large Nav start
         <div>
-             <nav className={scrolled? "navbar  hidden md:flex justify-between  z-50 bg-black/70 py-3 pr-3 ":"hidden md:flex justify-between mx-10 z-50 navbar"}>
+             <motion.nav 
+             initial={{
+                opacity:0,
+                y:-500,
+                scale:0.5
+             }}
+
+             animate = {{
+                opacity:1,
+                y:0,
+                scale:1
+             }}
+
+             transition={{
+                duration:3
+             }}
+             className={scrolled? "navbar  hidden md:flex justify-between  z-50 bg-black/70 py-3 pr-3 ":"hidden md:flex justify-between mx-10 z-50 navbar"}>
                 <div className="flex space-x-8 items-center text-gray-100 text-[12px] pt-2 font-extrabold">
                     {/* Left */}
                     <div className={ scrolled ? "hidden ":"text-coolYellow scale-125 bg-rounded-lg flex ml-5 h-20 w-20 p-5"} 
@@ -81,7 +97,7 @@ const Nav = () => {
                         > 
                             {
                                 scrolled && (
-                                    <BlenderIcon className="h-16 w-16 text-coolYellow transform transition ease-in-out duration-1000 cursor-pointer"/>
+                                    <BlenderIcon className="h-16 w-16 text-[16px] text-coolYellow transform transition ease-in-out duration-1000 cursor-pointer"/>
 
                                 )
                             }
@@ -166,7 +182,7 @@ const Nav = () => {
                 <button className="p-3 bg-black border border-coolYellowFocus text-coolYellow hover:bg-coolYellowFocus hover:text-black transform transition duration-500 ease-out mr-10">+123.45.67.89.10</button>
 
                 </div>
-        </nav>
+        </motion.nav>
 
             {/* Small nav start */}
 
