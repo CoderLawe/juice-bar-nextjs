@@ -8,7 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 
-const MenuItem = ({ image, title, extras }) => {
+const MenuItem = ({ image, title, extras, price }) => {
 
     const [open, setOpen] = useContext(OpenContext)
     const [path, setPath] = useContext(ImageContext)
@@ -60,7 +60,7 @@ const MenuItem = ({ image, title, extras }) => {
 
                 <div data-aos="fade-in" data-aos-duration="2000" className="w-[140px] h-[0.02em] bg-lightYellow"/>
 
-                <p  data-aos="fade-in" data-aos-duration="4000" className="text-gray-300 font-Cormorant text-[25px]">$32</p>
+                <p  data-aos="fade-in" data-aos-duration="4000" className="text-gray-300 font-Cormorant text-[25px]">${price}</p>
 
                 {/* <div className={open ? "flex h-[250px] w-[250px] relative ":"hidden"}>
                     <Image src={image} layout="fill" objectFit="cover"/>

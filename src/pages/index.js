@@ -50,6 +50,12 @@ export default function HomePage() {
       <SmallCarouselHero className="-z-10"/>
       <About />
 
+      <div className="flex-col space-y-5">
+        <div className="flex justify-center text-4xl mt-10">
+            <h1 className="text-coolYellowFocus font-Cormorant  font-light italic">Our Menu</h1>
+        </div>
+      </div>
+      
       <Menu />
 
     {/* <Masonry /> */}

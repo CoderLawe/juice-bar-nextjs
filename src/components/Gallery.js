@@ -26,10 +26,10 @@ const Gallery  = () => {
                     <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1023671245922893894/pexels-abdulrhman-alkady-10590397.jpg"/>
                     <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1023671394292215928/pexels-mathias-reding-9685229.jpg"/>
 
-                    <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1021330259020349500/pexels-jess-bailey-designs-1058434.jpg"/>
+                    <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1023671038581669888/pexels-mix-and-match-studio-4227023.jpg"/>
                     <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg"/>
                     <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1021347820357296128/pexels-eiliv-aceron-6895958.jpg"/>
-                    <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1021330259020349500/pexels-jess-bailey-designs-1058434.jpg"/>
+                    <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1023671049818214410/pexels-yusril-khaerul-muslim-9454718.jpg"/>
 
 
                     {/* <GalleryImage data-aos="fade-in" data-aos-duration="3000" img="https://cdn.discordapp.com/attachments/817048198022430761/1021330259020349500/pexels-jess-bailey-designs-1058434.jpg"/>
