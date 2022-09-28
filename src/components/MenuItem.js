@@ -8,7 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 
-const MenuItem = ({ image }) => {
+const MenuItem = ({ image, title, extras }) => {
 
     const [open, setOpen] = useContext(OpenContext)
     const [path, setPath] = useContext(ImageContext)
@@ -56,7 +56,7 @@ const MenuItem = ({ image }) => {
         <div  onMouseOver={() => setOpen(true)} className="flex-col cursor-pointer">
             {/* Menu Item */}
             <div  className="flex space-x-8 justify-between items-center lg:max-w-[550px]">
-                <p data-aos="fade-in" data-aos-duration="3000" className="text-coolYellow font-light font-Cormorant text-[20px] lg:text-[25px]">Mango Smoothie on Ice</p>
+                <p data-aos="fade-in" data-aos-duration="3000" className="text-coolYellow font-light font-Cormorant text-[20px] lg:text-[25px]">{title}</p>
 
                 <div data-aos="fade-in" data-aos-duration="2000" className="w-[140px] h-[0.02em] bg-lightYellow"/>
 
@@ -69,8 +69,14 @@ const MenuItem = ({ image }) => {
 
             {/* Description */}
             <div className="flex justify-start">
-              <p data-aos="fade-in" data-aos-duration="4000" className="text-gray-400 text-[15px] text-sm  mt-4 ml-3 lg:ml-0  leading-6 font-light">Whipped cream | Ice</p>
 
+             
+             
+
+  
+                <p data-aos="fade-in" data-aos-duration="4000" className="text-gray-400 text-[15px] text-sm  mt-4 ml-3 lg:ml-0  leading-6 font-light"> Ice | Whipped Cream</p>
+
+             
             </div>
 
 

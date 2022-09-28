@@ -72,10 +72,10 @@ const Nav = () => {
              transition={{
                 duration:3
              }}
-             className={scrolled? "navbar  hidden md:flex justify-between  z-50 bg-black/70 py-3 pr-3 ":"hidden md:flex justify-between mx-10 z-50 navbar"}>
+             className={scrolled? "navbar  hidden md:flex justify-between  z-50 bg-black/70 py-3 pr-3 ":"hidden md:flex justify-between ml-5 mr-10 z-50 navbar"}>
                 <div className="flex space-x-8 items-center text-gray-100 text-[12px] pt-2 font-extrabold">
                     {/* Left */}
-                    <div className={ scrolled ? "hidden ":"text-coolYellow scale-125 bg-rounded-lg flex ml-5 h-20 w-20 p-5"} 
+                    <div className={ scrolled ? "hidden ":"text-coolYellow scale-125 bg-rounded-lg flex ml-5 lg:ml-0 h-20 w-20 p-5"} 
     >
                         <span className="font-Cormotant text-[50px] italic">J</span>
                     </div>
@@ -112,7 +112,7 @@ const Nav = () => {
                 smooth={true}
                 duration={1000}
                 >
-                <p className="activate hover:hover-link active:text-coolYellow active:border-b active:border-coolYellow">HOME</p>
+                <p className={scrolled ? "activate hover:hover-link text-gray-200 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow  cursor-pointer hover:text-coolYellow"}>HOME</p>
 
                 </Link>
                 <Link
@@ -122,7 +122,7 @@ const Nav = () => {
                     smooth={true}
                     duration={2000}
                 >
-                    <p className="hover:hover-link">ABOUT</p>
+                    <p className={scrolled ? "activate hover:hover-link text-gray-200 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow"}>ABOUT</p>
                 </Link>
                 <Link
                     activeClass="active"
@@ -131,7 +131,7 @@ const Nav = () => {
                     smooth={true}
                     duration={2000}
                 >
-                    <p className="hover:hover-link highlighted">MENU</p>
+                    <p className={scrolled ? "activate hover:hover-link text-gray-200 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow"}>MENU</p>
                 </Link>
                 <Link
                     activeClass="active"
@@ -140,7 +140,7 @@ const Nav = () => {
                     smooth={true}
                     duration={1000}
                 >
-                    <p className="hover:hover-link">GALLERY</p>
+                    <p className={scrolled ? "activate hover:hover-link text-gray-200 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow"}>GALLERY</p>
                 </Link>
                 <Link
                     activeClass="active"
@@ -149,7 +149,7 @@ const Nav = () => {
                     smooth={true}
                     duration={1000}
                 >
-                    <p className="hover:hover-link active:text-white">CONTACT</p>
+                    <p className={scrolled ? "activate hover:hover-link text-gray-200 active:border-b active:border-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow"}>CONTACT</p>
                 </Link>
 
 

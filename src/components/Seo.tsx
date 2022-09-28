@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Smoothie bar',
-  siteName: 'Smoothie bar',
+  title: 'Flatfender |',
+  siteName: 'Flatfender Smoothie bar',
   description:
   'A responsive smoothie bar site  built by Lawe Sosah',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */

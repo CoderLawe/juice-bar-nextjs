@@ -43,10 +43,10 @@ const Menu = () => {
 
                         <div className=" flex-col space-y-12 mt-10">
                             {/* Menu items */}
-                            <MenuItem image="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg"/>
-                            <MenuItem image="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg"/>
-                            <MenuItem image="https://cdn.discordapp.com/attachments/817048198022430761/1021347820357296128/pexels-eiliv-aceron-6895958.jpg"/>
-                            <MenuItem image="https://cdn.discordapp.com/attachments/817048198022430761/1021350098501898310/pexels-abhishek-hajare-5511227.jpg"/>
+                            <MenuItem title="Large Iced Coffee" extras={['Espresso Shot','Ice']} image="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg"/>
+                            <MenuItem title = "Blue blast delight" extras={['Whipped Cream','Ice']}image="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg"/>
+                            <MenuItem title = "Mango Smoothie" extras={['Whipped Cream','Ice']}image="https://cdn.discordapp.com/attachments/817048198022430761/1021347820357296128/pexels-eiliv-aceron-6895958.jpg"/>
+                            <MenuItem title="Club Smoothie" extras={['Whipped Cream','Ice']} image="https://cdn.discordapp.com/attachments/817048198022430761/1021350098501898310/pexels-abhishek-hajare-5511227.jpg"/>
 
 
                         </div>
@@ -75,10 +75,11 @@ const Menu = () => {
 
                     <div className="flex-col space-y-12 mt-10">
                         {/* Menu items */}
-                        <MenuItem text="an example of dynamic text"/>
-                        <MenuItem text="another example of dynamic text"/>
-                        <MenuItem text="a third example of dynamic text"/>
-                        <MenuItem text=" a final example of dynmaic text"/>
+                        <MenuItem title="Large Iced Coffee" extras={['Espresso Shot','Ice']} image="https://cdn.discordapp.com/attachments/817048198022430761/1020269046316408833/pexels-this-is-zun-1148215.jpg"/>
+                            <MenuItem title = "Blue blast delight" extras={['Whipped Cream','Ice']}image="https://cdn.discordapp.com/attachments/817048198022430761/1021333070877577266/pexels-arina-krasnikova-7376915.jpg"/>
+                            <MenuItem title = "Mango Smoothie" extras={['Whipped Cream','Ice']}image="https://cdn.discordapp.com/attachments/817048198022430761/1021347820357296128/pexels-eiliv-aceron-6895958.jpg"/>
+                            <MenuItem title="Club Smoothie" extras={['Whipped Cream','Ice']} image="https://cdn.discordapp.com/attachments/817048198022430761/1021350098501898310/pexels-abhishek-hajare-5511227.jpg"/>
+
 
 
                     </div>
