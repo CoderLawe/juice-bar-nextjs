@@ -66,18 +66,21 @@ const Nav = () => {
              animate = {{
                 opacity:1,
                 y:0,
-                scale:1
+                scale:1,
              }}
 
              transition={{
-                duration:3
+                duration:3,
+                delay:7
+
+                
              }}
              className={scrolled? "navbar  hidden md:flex justify-between  z-50 bg-black/70 py-3 pr-3 ":"hidden md:flex justify-between ml-5 mr-10 z-50 navbar"}>
                 <div className="flex space-x-8 items-center text-gray-100 text-[12px] pt-2 font-extrabold">
                     {/* Left */}
                     <div className={ scrolled ? "hidden ":"text-coolYellow scale-125 bg-rounded-lg flex ml-5 lg:ml-0 h-20 w-20 p-5"} 
     >
-                        <span className="font-Cormotant text-[50px] italic">J</span>
+                        <span className="font-Cormotant text-[50px] italic">F</span>
                     </div>
                     <Link 
                 activeClass="active"
@@ -122,7 +125,7 @@ const Nav = () => {
                     smooth={true}
                     duration={2000}
                 >
-                    <p className={scrolled ? "activate hover:hover-link text-gray-200 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow"}>ABOUT</p>
+                    <p className={scrolled ? "activate hover:hover-link text-gray-200 hover:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow":"activate hover:hover-link text-gray-700 active:border-b active:border-coolYellow cursor-pointer hover:text-coolYellow"}>ABOUT</p>
                 </Link>
                 <Link
                     activeClass="active"
@@ -135,7 +138,7 @@ const Nav = () => {
                 </Link>
                 <Link
                     activeClass="active"
-                    to="about"
+                    to="gallery"
                     spy={true}
                     smooth={true}
                     duration={1000}

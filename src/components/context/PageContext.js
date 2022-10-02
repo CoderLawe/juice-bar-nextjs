@@ -8,9 +8,13 @@ export const PageProvider = ({children}) => {
     const [path, setPath] = useState("");
     const [open, setOpen] = useState(false);
 
+    // useEffect(() => {
+    //     console.log("path", path)
+    // },[path])
+
     useEffect(() => {
-        console.log("path", path)
-    },[path])
+        console.log("open", open)
+    },[open])
     return(
         <ImageContext.Provider value={[path, setPath]}>
             <OpenContext.Provider value={[open, setOpen]}>

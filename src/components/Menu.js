@@ -67,8 +67,9 @@ const Menu = () => {
                             </div>
                            
                    
-                    <div className=" absolute h-[100%] w-[100%] bg-black/80 z-30 "/>
-                    <Image className="-z-0 bg-fixed" src="https://cdn.discordapp.com/attachments/817048198022430761/1021350098501898310/pexels-abhishek-hajare-5511227.jpg" layout="fill" objectFit="cover"/>
+                    <div className={open ? " absolute h-[100%] w-[100%] bg-black/30 z-30 transform transition-all duration-700 ease-in-out ": " absolute h-[100%] w-[100%] transform transition-all duration-500 ease-in-out bg-black/80 z-30 "}/>
+
+                    <Image className="-z-0 bg-fixed" src={open ? path : "https://cdn.discordapp.com/attachments/817048198022430761/1021350098501898310/pexels-abhishek-hajare-5511227.jpg"} layout="fill" objectFit="cover"/>
                 </div>
                 {/* Right side */}
 

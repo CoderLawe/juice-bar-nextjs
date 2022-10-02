@@ -53,7 +53,7 @@ const MenuItem = ({ image, title, extras, price }) => {
 
       
     return(
-        <div  onMouseOver={() => setOpen(true)} className="flex-col cursor-pointer">
+        <div  onPointerOver={handleOpen} onPointerOut={handleClose} className="flex-col cursor-pointer">
             {/* Menu Item */}
             <div  className="flex space-x-8 justify-between items-center lg:max-w-[550px]">
                 <p data-aos="fade-in" data-aos-duration="3000" className="text-coolYellow font-light font-Cormorant text-[20px] lg:text-[25px]">{title}</p>
