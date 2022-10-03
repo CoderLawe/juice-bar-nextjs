@@ -15,7 +15,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://cdn.discordapp.com/attachments/817048198022430761/1021347820357296128/pexels-eiliv-aceron-6895958.jpg',
+  image: 'https://cdn.discordapp.com/attachments/817048198022430761/1026527994463932487/Screen_Shot_2022-10-03_at_6.15.19_PM.png',
 };
 
 type SeoProps = {
