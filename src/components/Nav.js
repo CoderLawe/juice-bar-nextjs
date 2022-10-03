@@ -189,56 +189,38 @@ const Nav = () => {
 
             {/* Small nav start */}
 
-            <nav className={scrolled  ?" md:hidden bg-black/70 p-5 " :"  md:hidden bg-transparent p-5 "}>
-                <div className={opened ? "md:hidden flex justify-between items-center bg-coolYellowFocus":"flex justify-between  bg-coolBrown ml-10 md:hidden items-center"}>
-                    <span className="text-[40px] font-Cormorant italic text-coolYellowFocus">F</span>
-                    <button className={opened?"hidden":"px-2 py-5 bg-transparent border border-coolYellowFocus text-coolYellow hover:bg-coolYellowFocus hover:text-black transform transition duration-500 ease-out "}>+123.45.67.8.9</button>
-                    
-                    {
-                        opened && (
-                            <div className="ml-[165px]">
-                                <CloseIcon onClick={() => setOpened(false)}className= " h-14 w-14 text-gray-700 cursor-pointer "/>
-
-                            </div>
-
-                        ) 
-
-                    }
-
-                    {
-                        !opened &&
-                            (
-                                <MenuIcon onClick={() => setOpened(true)} className= "h-14 w-14 text-coolYellowFocus transform transition duration-300 ease-out"/>
-    
-                            )
+            <nav className={scrolled  ?" md:hidden bg-black/70" :"  md:hidden bg-transparent  "}>
+                <div className={opened ? "md:hidden flex justify-center items-center bg-coolYellowFocus":"flex justify-center  bg-coolBrown  md:hidden items-center py-3"}>
+                    <div className="flex justify-between space-x-12 items-center">
+                        <span className="text-[40px] font-Cormorant italic text-coolYellowFocus">F</span>
+                        <button className={opened?"hidden":"px-2 py-5 bg-transparent border border-coolYellowFocus text-coolYellow hover:bg-coolYellowFocus hover:text-black transform transition duration-500 ease-out "}>+123.45.67.8.9</button>
                         
-                    }
-                    <div className="flex justify-end">
+                        {
+                            opened && (
+                                <div className="ml-10">
+                                    <CloseIcon onClick={() => setOpened(false)}className= " h-14 w-14 text-gray-700 cursor-pointer "/>
 
+                                </div>
+
+                            ) 
+
+                        }
+
+                        {
+                            !opened &&
+                                (
+                                    <MenuIcon onClick={() => setOpened(true)} className= "h-14 w-14 text-coolYellowFocus transform transition duration-300 ease-out"/>
+        
+                                )
+                            
+                        }
                     </div>
+    
                 </div>
 
                 <div className={opened ? " flex justify-center bg-coolYellowFocus  h-screen":"hidden"}>
-                        <div className="flex-col space-y-10 mt-10">
-                            <Link 
-                            activeClass="active"
-                            to="home"
-                            spy={true}
-                            smooth={true}
-                            duration={10000}
-                            >
-{/*                                 
-                                <animated.div 
-                                    style={{
-                                    
-                                        ...styles,
-                                    }
-                                    }
-                                
-                                    > <StarIcon className={scrolled ? "h-16 text-coolYellow transform transition ease-in-out duration-1000 cursor-pointer" :"transform transition ease-in-out duration-500 hidden "}/>
-                                </animated.div> */}
-                            
-                            </Link>
+                        <div className="flex-col space-y-18 mt-20">
+                         
                             <Link
                             className="navbar"
                             activeClass="active"

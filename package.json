@@ -24,6 +24,7 @@
     "@mui/material": "^5.10.5",
     "aos": "^2.3.4",
     "clsx": "^1.2.1",
+    "firebase": "^9.10.0",
     "framer-motion": "^7.3.5",
     "lodash": "^4.17.21",
     "lodash.shuffle": "^4.2.0",

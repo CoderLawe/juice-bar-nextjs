@@ -1,8 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 const  defaultTheme = require("tailwindcss/defaultTheme");
+// import { ImageContext, OpenContext } from "./context/PageContext";
 
+
+// LOOK UP HOW TO USE CONTEXT
 /** @type {import('tailwindcss').Config} */
+
+
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {

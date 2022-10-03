@@ -28,7 +28,7 @@ const MenuItem = ({ image, title, extras, price }) => {
       const handleOpen = () => {
         setOpen(true)
         setPath(image)
-        console.log(path)
+        // console.log(path)
       }
 
       const handleClose = () => {
