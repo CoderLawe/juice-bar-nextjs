@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🔋 ts-nextjs-tailwind-starter</h1>
   <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
+![alt text](https://cdn.discordapp.com/attachments/817048198022430761/1028758273014378516/Flatfender_Smoothie_bar_page-0001.jpg)
   
   
   [![CodeFactor](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/badge/main)](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/overview/main)
